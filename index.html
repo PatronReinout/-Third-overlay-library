@@ -1,28 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body>
-    <button id="btn">click</button>
-    <div
-      style="width: 100px; height: 100px; background-color: red"
-      id="container"
-    ></div>
-    <div style="width: 100px; height: 100px; background-color: red"></div>
-    <script src="js/plain-overlay.min.js"></script>
-    <script>
-      var overlay = new PlainOverlay(document.getElementById("container"), {
-        face: false,
-      });
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<button id="btn">click</button>
 
-      addEventListener("click", showOverlay);
-      function showOverlay() {
-        overlay.show();
-      }
-    </script>
-  </body>
+		<div id="dashboard">
+			<img src="img/dashboard.png" />
+		</div>
+		<script src="js/plain-overlay.min.js"></script>
+		<script>
+			var overlay = new PlainOverlay(document.getElementById("dashboard"), {
+				face: false,
+			});
+
+			addEventListener("click", showOverlay);
+			function showOverlay() {
+				overlay.show();
+			}
+		</script>
+	</body>
 </html>
