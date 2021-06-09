@@ -4,23 +4,35 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
 		<title>Document</title>
+		<link href="css/style.css" />
 	</head>
 	<body>
-		<button id="btn">click</button>
+		<div class="button" style="text-align: center; margin: 25px">
+			<button id="btn">show</button>
+			<button id="btn-close">hide</button>
+		</div>
 
-		<div id="dashboard">
+		<div id="dashboard" style="width: 1500px; height: 1500px">
 			<img src="img/dashboard.png" />
 		</div>
+
 		<script src="js/plain-overlay.min.js"></script>
 		<script>
 			var overlay = new PlainOverlay(document.getElementById("dashboard"), {
 				face: false,
 			});
+			var btn = document.getElementById("btn");
+			var btn1 = document.getElementById("btn-close");
 
-			addEventListener("click", showOverlay);
+			btn.addEventListener("click", showOverlay);
 			function showOverlay() {
 				overlay.show();
+			}
+			btn1.addEventListener("click", hideOverlay);
+			function hideOverlay() {
+				overlay.hide();
 			}
 		</script>
 	</body>
